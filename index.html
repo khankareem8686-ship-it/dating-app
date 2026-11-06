@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeartLink | Dating App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-row">
+          <div class="brand-mark">H</div>
+          <div>
+            <p class="eyebrow">Dating app</p>
+            <h1>HeartLink</h1>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">
+            <span>💘</span>
+            Discover
+          </button>
+          <button class="nav-item">
+            <span>💬</span>
+            Messages
+          </button>
+          <button class="nav-item">
+            <span>✨</span>
+            Matches
+          </button>
+          <button class="nav-item">
+            <span>⚙️</span>
+            Settings
+          </button>
+        </nav>
+
+        <div class="mini-profile">
+          <div class="avatar avatar-lg gradient-pink">K</div>
+          <div>
+            <h3>Kareem</h3>
+            <p>Looking for a spark</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow muted">Your daily match</p>
+            <h2>Discover people</h2>
+          </div>
+          <button class="ghost-button">Filters</button>
+        </header>
+
+        <section class="discover-grid">
+          <div class="card-stage">
+            <div id="profile-card" class="profile-card" aria-live="polite">
+              <div class="card-image-wrap">
+                <img id="profile-image" src="" alt="Dating profile" />
+                <div class="image-overlay"></div>
+                <div class="card-badges">
+                  <span id="profile-distance" class="badge">2 km away</span>
+                  <span id="profile-status" class="badge green">Online</span>
+                </div>
+              </div>
+
+              <div class="card-info">
+                <div class="identity-row">
+                  <div>
+                    <h3 id="profile-name">Loading...</h3>
+                  </div>
+                  <span id="profile-age" class="age-pill">0</span>
+                </div>
+
+                <div class="meta-row">
+                  <span id="profile-city">City</span>
+                  <span class="dot">•</span>
+                  <span id="profile-occupation">Occupation</span>
+                </div>
+
+                <p id="profile-bio" class="bio">
+                  Finding my favorite kind of adventure, one coffee and one laugh at a time.
+                </p>
+
+                <div id="profile-tags" class="tags"></div>
+              </div>
+            </div>
+
+            <div class="swipe-actions">
+              <button id="reject-btn" class="circle-btn reject" aria-label="Reject profile">✕</button>
+              <button id="superlike-btn" class="circle-btn superlike" aria-label="Super like">★</button>
+              <button id="like-btn" class="circle-btn like" aria-label="Like profile">♥</button>
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <div class="panel-card">
+              <div class="panel-header">
+                <h3>Quick match</h3>
+                <span class="pill">Live</span>
+              </div>
+
+              <div class="stats-row">
+                <div>
+                  <strong id="match-count">0</strong>
+                  <span>Matches</span>
+                </div>
+                <div>
+                  <strong id="likes-count">0</strong>
+                  <span>Likes</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-card">
+              <div class="panel-header">
+                <h3>Preferences</h3>
+              </div>
+
+              <div class="preference-box">
+                <label>Age range</label>
+                <input type="range" min="18" max="45" value="28" />
+              </div>
+
+              <div class="preference-box">
+                <label>Distance</label>
+                <input type="range" min="5" max="100" value="35" />
+              </div>
+
+              <div class="preference-box">
+                <label>Interests</label>
+                <div class="chip-row">
+                  <span class="chip active">Travel</span>
+                  <span class="chip">Music</span>
+                  <span class="chip">Food</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel-card matches-panel">
+            <div class="panel-header">
+              <h3>New matches</h3>
+              <a href="#">View all</a>
+            </div>
+
+            <div id="matches-list" class="matches-list"></div>
+          </div>
+
+          <div class="panel-card chat-panel">
+            <div class="panel-header">
+              <h3>Messages</h3>
+              <span class="online-dot">●</span>
+            </div>
+
+            <div class="chat-preview">
+              <div class="chat-bubble incoming">
+                <p>Hey! Want to grab coffee this weekend?</p>
+              </div>
+              <div class="chat-bubble outgoing">
+                <p>Absolutely, I’d love that 😊</p>
+              </div>
+            </div>
+
+            <div class="chat-input-row">
+              <input type="text" value="Let’s do brunch!" aria-label="Message input" />
+              <button>Send</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
